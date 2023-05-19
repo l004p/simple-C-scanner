@@ -1,0 +1,22 @@
+typedef enum {
+    T_EOF=0,
+    T_KEYWORD,
+    T_IDENT,
+    T_NUMERICCONST,
+    T_STRING,
+    T_CHAR,
+    T_ERROR,
+    T_EQEQ,
+    T_PLUSPLUS,
+    T_MINUSMINUS,
+    T_GEQ,
+    T_LEQ,
+    T_ECLAIMEQ,
+    T_LANGBRACK,
+    T_RANGBRACK,
+    T_PLUS,
+    T_MINUS,
+    T_STAR,
+    T_FORSLASH,
+    T_MOD
+}token_t;
