@@ -6,7 +6,7 @@ extern int yylex();
 extern char *yytext;
 
 int main() {
-    yyin = fopen("01.c", "r");
+    yyin = fopen("./test_files/01.c", "r");
     if(!yyin){
         printf("could not open file\n");
         return 1;
