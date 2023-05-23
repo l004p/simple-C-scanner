@@ -10,7 +10,7 @@ ID [a-zA-Z_][a-zA-Z0-9_]{0,30}
 
 %%
 
-[[:blank:]" "\n]      /* eat blank space*/
+[[:blank:][:space:]]    /* eat blank space*/
 "//"[^\n]*              /* eat one line comment */
 "/*"                    BEGIN(comment);
 <comment>[^*]*          /* eat comment body */
@@ -60,9 +60,9 @@ unsigned    {return T_KEYWORD;}
 "--"        {return T_MINUSMINUS;}
 ">="        {return T_GEQ;}
 "<="        {return T_LEQ;}
-"!="       {return T_ECLAIMEQ;}
+"!="        {return T_ECLAIMEQ;}
 "&&"        {return T_AMPAMP;}
-"|"          {return T_VERTBAR;}
+"|"         {return T_VERTBAR;}
 "||"        {return T_VERTVERT;}
 ">>"        {return T_RANGRANG;}
 "<<"        {return T_LANGLANG;}
